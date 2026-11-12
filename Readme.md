@@ -38,4 +38,4 @@ Ping worker -> PostgreSQL -> FastAPI -> SQL
 4 спринт - FrontEND + Тестирование + запуск в прод
 
 
-![Свинка Piger](app/static/img/piger-snoring.gif)
+![Свинка Piger](App/static/img/piger-snoring.gif)
