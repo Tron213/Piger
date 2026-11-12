@@ -37,10 +37,5 @@ Ping worker -> PostgreSQL -> FastAPI -> SQL
 3 спринт - подключение FASTapi
 4 спринт - FrontEND + Тестирование + запуск в прод
 
-<div align="center">
-  <img src="app/static/img/piger-snoring.gif"
-       alt="Спящая свинка Piger"
-       width="180">
 
-  <p><i>Поросятки следят за вашими серверами!</i></p>
-</div>
+![Свинка Piger](app/static/img/piger-snoring.gif)
