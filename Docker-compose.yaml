@@ -5,6 +5,7 @@ services:
     image: postgres:18
     container_name: Postgres_piger
     restart: unless-stopped
+
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
@@ -17,3 +18,28 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+  
+  worker:
+    build: 
+      context: .
+      dockerfile: Worker/Dockerfile
+    restart: unless-stopped
+    cap_add:
+      - NET_RAW
+    env_file:
+      - .env
+    depends_on:
+      postgres:
+        condition: service_healthy
+  app:
+    build:
+      context: .
+      dockerfile: App/Dockerfile
+    restart: unless-stopped
+    env_file:
+      - .env
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "900:900"
