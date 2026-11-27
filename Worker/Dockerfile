@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY Worker/ . 
 
-CMD ["python3", "main.py"]ды
+CMD ["python3", "main.py"]
