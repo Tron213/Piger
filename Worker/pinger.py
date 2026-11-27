@@ -15,6 +15,7 @@ async def multipings(addresses):
     )
     result = []
     for host in hosts:
-        print(host.is_alive, host.address)
+        
         result.append([host.is_alive, host.address, host.avg_rtt if host.is_alive else None])
+        print(result)
     return result
