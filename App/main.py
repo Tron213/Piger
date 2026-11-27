@@ -2,7 +2,7 @@ from fastapi import FastAPI, Depends
 from schemas import MonitorCreate
 from sqlalchemy.orm import Session
 from database import get_db
-from models import Monitor
+from Shared.models import Monitor
 
 app = FastAPI()
 
